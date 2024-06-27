@@ -1,0 +1,5 @@
+<svg class="background">
+  <image id="backgroundImage" href="jungla.png" />
+  <text id="labelHora" />
+  <image id="budiImage" href="budi.png" />
+</svg>
