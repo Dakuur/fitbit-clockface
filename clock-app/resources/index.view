@@ -1,5 +1,5 @@
 <svg class="background">
-  <image id="backgroundImage" href="jungla.png" />
+  <image id="backgroundImage" href="fondobudi.png" />
   <text id="labelHora" />
-  <image id="budiImage" href="budi.png" />
+  <image id="foregroundImage" href="budi.png" />
 </svg>
