@@ -1,6 +1,6 @@
 # Fitbit Clock APP
 
-A Ferrari clockface for the Fitbit Sense smartwatch, using JavaScript
+A Ferrari clockface for the Fitbit Sense smartwatch, using JavaScript and CSS
 
 ## Screenshots
 
