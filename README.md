@@ -1,7 +1,8 @@
 
 # Fitbit Clock APP
 
-A Ferrari clockface for the Fitbit Sense smartwatch
+A Ferrari clockface for the Fitbit Sense smartwatch.
+User's BPM displayed as kilometers per hour.
 
 
 ## Screenshots
