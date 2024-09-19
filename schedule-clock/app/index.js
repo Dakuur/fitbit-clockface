@@ -35,25 +35,29 @@ function getNextClass(currentTime, day) {
 
     // Si la clase actual está en curso
     if (currentDate >= classStartDate && currentDate < classEndDate) {
-      // Verificamos si la próxima clase empieza justo cuando termina la actual
-      const nextClassDetails = classes[i + 1];
-      if (nextClassDetails && classEndDate.getTime() === new Date(`1970-01-01T${nextClassDetails.start}:00`).getTime()) {
-        // Si quedan 15 minutos o menos para que termine la clase actual
-        const remainingTime = classEndDate - currentDate;
-        if (remainingTime <= 15 * 60 * 1000) {
-          return nextClassDetails;  // Mostrar información de la próxima clase
+      // Verificamos si han pasado 15 minutos desde que comenzó la clase actual
+      const elapsedTime = currentDate - classStartDate;
+      if (elapsedTime >= 15 * 60 * 1000) {
+        // Verificamos si la próxima clase empieza justo cuando termina la actual
+        const nextClassDetails = classes[i + 1];
+        if (
+          nextClassDetails &&
+          classEndDate.getTime() ===
+            new Date(`1970-01-01T${nextClassDetails.start}:00`).getTime()
+        ) {
+          return nextClassDetails; // Mostrar información de la próxima clase
         }
       }
-      return classDetails;  // Clase en curso
+      return classDetails; // Clase en curso
     }
 
     // Si la clase actual ya ha terminado, buscamos la siguiente clase
     if (currentDate < classStartDate) {
-      return classDetails;  // Próxima clase
+      return classDetails; // Próxima clase
     }
   }
 
-  return null;  // Si no hay más clases en el día
+  return null; // Si no hay más clases en el día
 }
 
 // Update the clock every minute
@@ -118,11 +122,11 @@ clock.ontick = (evt) => {
   }
 
   if (found) {
-	// Actualización de la imagen de fondo
-	backgroundImage.href = `./resources/specials/${mins}.jpg`;
-	labelHora.text = "";
+    // Actualización de la imagen de fondo
+    backgroundImage.href = `./resources/specials/${mins}.jpg`;
+    labelHora.text = "";
   } else {
-	backgroundImage.href = "";
+    backgroundImage.href = "";
   }
 
   // Actualización del sensor de ritmo cardíaco
