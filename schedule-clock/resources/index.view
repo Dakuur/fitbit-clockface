@@ -1,4 +1,5 @@
 <svg class="background">
+  <image id="backgroundImage" href="" />
   <text id="labelHora" />
   <text id="labelBPM" />
   <text id="labelBattery" />
