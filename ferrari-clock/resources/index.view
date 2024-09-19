@@ -1,0 +1,6 @@
+<svg class="background">
+  <image id="backgroundImage" href="fondoferrari.png" />
+  <text id="labelHora" />
+  <image id="foregroundImage" href="ferrari.png" />
+  <text id="labelBPM" />
+</svg>
