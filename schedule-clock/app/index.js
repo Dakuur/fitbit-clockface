@@ -3,6 +3,8 @@ import * as document from "document";
 import { preferences } from "user-settings";
 import { HeartRateSensor } from "heart-rate";
 import { battery } from "power";
+import { readFileSync } from "fs";
+
 
 function zeroPad(i) {
   if (i < 10) {
@@ -68,124 +70,9 @@ const nextRoomTime = document.getElementById("nextRoomTime");
 const nextClassType = document.getElementById("nextClassType");
 
 // Schedule data
-const schedule = {
-    "Monday": [
-      {
-        "start": "10:00",
-        "end": "14:00",
-        "subject": "CVC",
-        "location": "Edifici O",
-        "type": "Treball"
-      },
-      {
-        "start": "15:00",
-        "end": "17:00",
-        "subject": "GIxPD",
-        "location": "Q2/1009",
-        "type": "Teoría"
-      },
-      {
-        "start": "17:00",
-        "end": "19:00",
-        "subject": "Eng. del Programari",
-        "location": "Q3/0013",
-        "type": "Problemes"
-      }
-    ],
-    "Tuesday": [
-      {
-        "start": "10:00",
-        "end": "14:00",
-        "subject": "CVC",
-        "location": "Edifici O",
-        "type": "Treball"
-      },
-      {
-        "start": "15:00",
-        "end": "17:00",
-        "subject": "Anàlisi estadística",
-        "location": "Q2/1009",
-        "type": "Problemes"
-      },
-      {
-        "start": "17:00",
-        "end": "19:00",
-        "subject": "Optimització",
-        "location": "Q2/1009",
-        "type": "Problemes"
-      }
-    ],
-    "Wednesday": [
-      {
-        "start": "10:00",
-        "end": "14:00",
-        "subject": "CVC",
-        "location": "Edifici O",
-        "type": "Treball"
-      },
-      {
-        "start": "15:00",
-        "end": "17:00",
-        "subject": "GIxPD",
-        "location": "Lab. 3",
-        "type": "Pràctiques"
-      },
-      {
-        "start": "17:00",
-        "end": "19:00",
-        "subject": "Machine Learning",
-        "location": "Q2/1005",
-        "type": "Problemes"
-      }
-    ],
-    "Thursday": [
-      {
-        "start": "10:00",
-        "end": "14:00",
-        "subject": "CVC",
-        "location": "Edifici O",
-        "type": "Treball"
-      },
-      {
-        "start": "15:00",
-        "end": "17:00",
-        "subject": "Anàlisi estadística",
-        "location": "Q2/1009",
-        "type": "Problemes"
-      },
-      {
-        "start": "17:00",
-        "end": "19:00",
-        "subject": "Optimització",
-        "location": "Q2/1009",
-        "type": "Problemes"
-      }
-    ],
-    "Friday": [
-      {
-        "start": "10:00",
-        "end": "14:00",
-        "subject": "CVC",
-        "location": "Edifici O",
-        "type": "Treball"
-      },
-      {
-        "start": "15:00",
-        "end": "17:00",
-        "subject": "Machine Learning",
-        "location": "Q2/1009",
-        "type": "Pràctiques"
-      },
-      {
-        "start": "17:00",
-        "end": "19:00",
-        "subject": "Eng. del Programari",
-        "location": "Q3/0013",
-        "type": "Problemes"
-      }
-    ]
-  }
-  
+let schedule = readFileSync("./resources/schedule.json", "utf-8");
+schedule = JSON.parse(schedule);
+
 // Actualizamos el evento del reloj para mostrar la próxima clase
 clock.ontick = (evt) => {
 	let today = evt.date;
