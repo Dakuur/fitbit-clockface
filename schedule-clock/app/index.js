@@ -37,27 +37,23 @@ function getNextClass(currentTime, day) {
     if (currentDate >= classStartDate && currentDate < classEndDate) {
       // Verificamos si la próxima clase empieza justo cuando termina la actual
       const nextClassDetails = classes[i + 1];
-      if (
-        nextClassDetails &&
-        classEndDate.getTime() ===
-          new Date(`1970-01-01T${nextClassDetails.start}:00`).getTime()
-      ) {
+      if (nextClassDetails && classEndDate.getTime() === new Date(`1970-01-01T${nextClassDetails.start}:00`).getTime()) {
         // Si quedan 15 minutos o menos para que termine la clase actual
         const remainingTime = classEndDate - currentDate;
         if (remainingTime <= 15 * 60 * 1000) {
-          return nextClassDetails; // Mostrar información de la próxima clase
+          return nextClassDetails;  // Mostrar información de la próxima clase
         }
       }
-      return classDetails; // Clase en curso
+      return classDetails;  // Clase en curso
     }
 
     // Si la clase actual ya ha terminado, buscamos la siguiente clase
     if (currentDate < classStartDate) {
-      return classDetails; // Próxima clase
+      return classDetails;  // Próxima clase
     }
   }
 
-  return null; // Si no hay más clases en el día
+  return null;  // Si no hay más clases en el día
 }
 
 // Update the clock every minute
@@ -98,7 +94,7 @@ clock.ontick = (evt) => {
     "Saturday",
   ];
   const currentDay = dayNames[today.getDay()];
-  const currentTime = `${zeroPad(hours)}:${mins}`;
+  const currentTime = `${hours}:${mins}`;
 
   // Obtener la próxima clase del horario
   const nextClassInfo = getNextClass(currentTime, currentDay);
