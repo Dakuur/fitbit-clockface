@@ -75,14 +75,15 @@ let schedule = readFileSync("./resources/schedule.json", "utf-8");
 schedule = JSON.parse(schedule);
 
 // Special background data
-const specials = [10, 19, 33];
+const specials = [1,2,3,4,5,6,7,8,9,10,11,13,14,15,16,17,18,19,20,21,23,24,33,55];
 
 // Actualizamos el evento del reloj para mostrar la próxima clase
 clock.ontick = (evt) => {
   let today = evt.date;
   let hours = today.getHours();
   hours = correctHour(preferences, hours);
-  let mins = zeroPad(today.getMinutes());
+  let tmp_minutes = today.getMinutes();
+  let mins = zeroPad(tmp_minutes);
   labelHora.text = `${hours}:${mins}`;
 
   // Obtener el nombre del día actual
@@ -121,10 +122,14 @@ clock.ontick = (evt) => {
 
   if (found) {
     // Actualización de la imagen de fondo
-    backgroundImage.href = `./resources/specials/${mins}.jpg`;
-    labelHora.text = "";
+    backgroundImage.href = `./resources/specials/${tmp_minutes}.jpg`;
+    labelHora.text = `${hours}h             #${tmp_minutes}`;
+    labelHora.style.fontSize = 50;
+    labelHora.y = 130;
   } else {
     backgroundImage.href = "";
+    labelHora.style.fontSize = 121;
+    labelHora.y = 161;
   }
 
   // Actualización del sensor de ritmo cardíaco
