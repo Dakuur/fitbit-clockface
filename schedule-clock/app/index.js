@@ -110,7 +110,7 @@ clock.ontick = (evt) => {
     nextClassType.text = `${nextClassInfo.type}`;
     nextRoomTime.text = `${nextClassInfo.location}, ${nextClassInfo.start}`;
   } else {
-    nextClass.text = "No more classes";
+    nextClass.text = "";
     nextClassType.text = "";
     nextRoomTime.text = "";
   }
