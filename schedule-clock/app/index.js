@@ -4,6 +4,7 @@ import { preferences } from "user-settings";
 import { HeartRateSensor } from "heart-rate";
 import { battery } from "power";
 import { readFileSync, listDirSync } from "fs";
+import { BodyPresenceSensor } from "body-presence";
 
 function zeroPad(i) {
   if (i < 10) {
@@ -75,7 +76,10 @@ let schedule = readFileSync("./resources/schedule.json", "utf-8");
 schedule = JSON.parse(schedule);
 
 // Special background data
-const specials = [1,2,3,4,5,6,7,8,9,10,11,13,14,15,16,17,18,19,20,21,23,24,33,55];
+const specials = [
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 20, 21, 23, 24,
+  33, 55,
+];
 
 // Actualizamos el evento del reloj para mostrar la próxima clase
 clock.ontick = (evt) => {
@@ -133,15 +137,35 @@ clock.ontick = (evt) => {
   }
 
   // Actualización del sensor de ritmo cardíaco
-  if (HeartRateSensor) {
-    const hrm = new HeartRateSensor({ frequency: 1 });
-    hrm.addEventListener("reading", () => {
-      labelBPM.text = `${hrm.heartRate} ❤️`;
+  if (BodyPresenceSensor) {
+    const bodyPresence = new BodyPresenceSensor();
+    bodyPresence.addEventListener("reading", () => {
+      if (bodyPresence.present) {
+        if (HeartRateSensor) {
+          const hrm = new HeartRateSensor({ frequency: 1 });
+          hrm.addEventListener("reading", () => {
+            labelBPM.text = `${hrm.heartRate} ❤️`;
+          });
+          hrm.start();
+        }
+      }
+      else {
+        labelBPM.text = "--❤️";
+      }
     });
-    hrm.start();
+    bodyPresence.start();
   }
 
   // Actualización del nivel de batería
   let battery_level = Math.floor(battery.chargeLevel);
   labelBattery.text = `${battery_level}%`;
+
+  // Cambiar el color del texto según el nivel de batería
+  if (battery_level > 30) {
+    labelBattery.style.fill = "#10AC87";
+  } else if (battery_level > 10) {
+    labelBattery.style.fill = "#E16E25";
+  } else {
+    labelBattery.style.fill = "#CF1625";
+  }
 };
