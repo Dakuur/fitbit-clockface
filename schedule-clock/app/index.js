@@ -27,6 +27,11 @@ function getNextClass(currentTime, day) {
   // Obtenemos las clases del día actual
   const classes = schedule[day];
 
+  // Verificamos si hay clases para el día especificado
+  if (!classes || classes.length === 0) {
+    return null; // No hay clases en este día
+  }
+
   for (let i = 0; i < classes.length; i++) {
     const classDetails = classes[i];
     const currentDate = new Date(`1970-01-01T${currentTime}:00`);
