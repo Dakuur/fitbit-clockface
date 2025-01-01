@@ -1,0 +1,9 @@
+npx create-fitbit-app my-first-clock
+
+cd my-first-clock
+
+npx fitbit
+build
+install
+
+bi

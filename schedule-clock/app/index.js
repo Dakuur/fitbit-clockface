@@ -105,7 +105,8 @@ clock.ontick = (evt) => {
 
   // Obtener la próxima clase del horario
   const nextClassInfo = getNextClass(currentTime, currentDay);
-  if (nextClassInfo) {
+  // if (nextClassInfo) {
+  if (false) {
     nextClass.text = `${nextClassInfo.subject}`;
     nextClassType.text = `${nextClassInfo.type}`;
     nextRoomTime.text = `${nextClassInfo.location}, ${nextClassInfo.start}`;
@@ -148,8 +149,7 @@ clock.ontick = (evt) => {
           });
           hrm.start();
         }
-      }
-      else {
+      } else {
         labelBPM.text = "--❤️";
       }
     });
