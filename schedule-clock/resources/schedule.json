@@ -10,15 +10,15 @@
       {
         "start": "15:00",
         "end": "17:00",
-        "subject": "GIxPD",
-        "location": "Q2/1009",
-        "type": "Teoría"
+        "subject": "Criptografia",
+        "location": "Q4/1009",
+        "type": "Problemes"
       },
       {
         "start": "17:00",
         "end": "19:00",
-        "subject": "Eng. del Programari",
-        "location": "Q3/0013",
+        "subject": "DADM",
+        "location": "Q4/1013",
         "type": "Problemes"
       }
     ],
@@ -33,16 +33,16 @@
       {
         "start": "15:00",
         "end": "17:00",
-        "subject": "Anàlisi estadística",
-        "location": "Q2/1009",
+        "subject": "Visualització",
+        "location": "Q4/1009",
         "type": "Problemes"
       },
       {
         "start": "17:00",
         "end": "19:00",
-        "subject": "Optimització",
-        "location": "Q2/1009",
-        "type": "Problemes"
+        "subject": "CEN",
+        "location": "Q4/1009",
+        "type": "Teoria"
       }
     ],
     "Wednesday": [
@@ -56,15 +56,15 @@
       {
         "start": "15:00",
         "end": "17:00",
-        "subject": "GIxPD",
-        "location": "Lab. 3",
-        "type": "Pràctiques"
+        "subject": "Criptografia",
+        "location": "Q4/1009",
+        "type": "Problemes"
       },
       {
         "start": "17:00",
         "end": "19:00",
-        "subject": "Machine Learning",
-        "location": "Q2/1005",
+        "subject": "Deep learning",
+        "location": "Q4/1009",
         "type": "Problemes"
       }
     ],
@@ -79,15 +79,15 @@
       {
         "start": "15:00",
         "end": "17:00",
-        "subject": "Anàlisi estadística",
-        "location": "Q2/1009",
-        "type": "Problemes"
+        "subject": "DADM",
+        "location": "Aula Informatica B",
+        "type": "Teoria"
       },
       {
         "start": "17:00",
         "end": "19:00",
-        "subject": "Optimització",
-        "location": "Q2/1009",
+        "subject": "CEN",
+        "location": "Q4/1009",
         "type": "Problemes"
       }
     ],
@@ -102,15 +102,15 @@
       {
         "start": "15:00",
         "end": "17:00",
-        "subject": "Machine Learning",
-        "location": "Q2/1009",
+        "subject": "Deep learning",
+        "location": "Q4/1009",
         "type": "Problemes"
       },
       {
         "start": "17:00",
         "end": "19:00",
-        "subject": "Eng. del Programari",
-        "location": "Q3/0013",
+        "subject": "Visualització",
+        "location": "Q4/1009",
         "type": "Problemes"
       }
     ]
