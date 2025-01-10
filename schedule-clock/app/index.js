@@ -105,8 +105,12 @@ clock.ontick = (evt) => {
 
   // Obtener la próxima clase del horario
   const nextClassInfo = getNextClass(currentTime, currentDay);
-  // if (nextClassInfo) {
-  if (false) {
+
+  const currentDate = new Date();
+  const startDate = new Date(currentDate.getFullYear(), 1, 10); // February 10
+  const endDate = new Date(currentDate.getFullYear(), 5, 1); // June 1
+
+  if (nextClassInfo && currentDate > startDate && currentDate < endDate) {
     nextClass.text = `${nextClassInfo.subject}`;
     nextClassType.text = `${nextClassInfo.type}`;
     nextRoomTime.text = `${nextClassInfo.location}, ${nextClassInfo.start}`;
