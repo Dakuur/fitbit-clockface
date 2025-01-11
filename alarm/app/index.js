@@ -32,7 +32,6 @@ clock.granularity = "minutes";
 const labelHora = document.getElementById("labelHora");
 const labelBPM = document.getElementById("labelBPM");
 const labelBattery = document.getElementById("labelBattery");
-let timeout;
 
 // Actualizamos el evento del reloj para mostrar la próxima clase
 clock.ontick = (evt) => {
@@ -44,16 +43,17 @@ clock.ontick = (evt) => {
   labelHora.text = `${hours}:${mins}`;
 
   // Wake up
-  const wakeHour = 18;
-  const wakeMinutes = 23;
+  const wakeHour = 8;
+  const wakeMinutes = 0;
 
   // Actualización del sensor de ritmo cardíaco
   if (BodyPresenceSensor) {
     if (hours === wakeHour && tmp_minutes === wakeMinutes) {
       vibration.start("ring");
-      timeout = setTimeout(() => {
-        vibration.stop();
+      setTimeout(() => {
+      vibration.stop();
       }, 10000);
+      //console.log("Wake up!");
     }
 
     const bodyPresence = new BodyPresenceSensor();
