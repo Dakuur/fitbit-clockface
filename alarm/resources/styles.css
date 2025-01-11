@@ -1,0 +1,78 @@
+.defaultText {
+  font-size: 32;
+  font-family: System-Regular;
+  font-weight: regular;
+  text-length: 32;
+}
+
+#background {
+  width: 100%;
+  height: 100%;
+  fill: black;
+}
+
+/*
+.background {
+  viewport-fill: black;
+}
+*/
+
+#labelHora {
+  font-size: 121;
+  font-family: FBNucleon-Bold;
+  text-length: 32;
+  text-anchor: middle;
+  fill: white;
+  x: 168;
+  y: 161;
+}
+
+#labelBPM {
+  font-size: 35;
+  font-family: FBNucleon-Bold;
+  text-length: 32;
+  text-anchor: start;
+  x: 34;
+  y: 45;
+  fill: white;
+}
+
+#labelBattery {
+  font-size: 35;
+  font-family: FBNucleon-Bold;
+  text-length: 32;
+  text-anchor: end;
+  x: 303;
+  y: 45;
+  fill: white;
+}
+
+#nextClass {
+  font-size: 35;
+  font-family: FBNucleon-Bold;
+  text-length: 32;
+  text-anchor: middle;
+  x: 50%;
+  y: 65%;
+  fill: white;
+}
+
+#nextClassType {
+  font-size: 30;
+  font-family: FBNucleon-Bold;
+  text-length: 32;
+  text-anchor: middle;
+  x: 50%;
+  y: 75%;
+  fill: white;
+}
+
+#nextRoomTime {
+  font-size: 35;
+  font-family: FBNucleon-Bold;
+  text-length: 32;
+  text-anchor: middle;
+  x: 50%;
+  y: 90%;
+  fill: white;
+}

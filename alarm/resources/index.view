@@ -1,0 +1,8 @@
+<svg class="background">
+  <text id="labelHora" />
+  <text id="labelBPM" />
+  <text id="labelBattery" />
+  <text id="nextClass" />
+  <text id="nextClassType" />
+  <text id="nextRoomTime" />
+</svg>
