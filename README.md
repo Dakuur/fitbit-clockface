@@ -8,3 +8,5 @@ A Ferrari clockface for the Fitbit Sense smartwatch, using JavaScript and CSS
 
 User's BPM displayed as kilometers per hour.
 Tribute to Fernando Alonso in the 33rd minute of each hour.
+
+*Working on a new schedule clockface, with Google Calendar API and countdown
