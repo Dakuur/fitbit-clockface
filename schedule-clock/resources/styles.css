@@ -48,31 +48,31 @@
 }
 
 #nextClass {
+  font-size: 45;
+  font-family: FBNucleon-Bold;
+  text-length: 32;
+  text-anchor: middle;
+  x: 50%;
+  y: 84%;
+  fill: white;
+}
+
+#nextClassType {
   font-size: 35;
   font-family: FBNucleon-Bold;
   text-length: 32;
   text-anchor: middle;
   x: 50%;
-  y: 65%;
+  y: 96%;
   fill: white;
 }
 
-#nextClassType {
+#nextRoomTime {
   font-size: 30;
   font-family: FBNucleon-Bold;
   text-length: 32;
   text-anchor: middle;
   x: 50%;
-  y: 75%;
-  fill: white;
-}
-
-#nextRoomTime {
-  font-size: 35;
-  font-family: FBNucleon-Bold;
-  text-length: 32;
-  text-anchor: middle;
-  x: 50%;
-  y: 90%;
+  y: 93%;
   fill: white;
 }
