@@ -1,118 +1,102 @@
 {
-    "Monday": [
-      {
-        "start": "10:00",
-        "end": "14:00",
-        "subject": "CVC",
-        "location": "Edifici O",
-        "type": "Treball"
-      },
-      {
-        "start": "15:00",
-        "end": "17:00",
-        "subject": "Criptografia",
-        "location": "Q4/1009",
-        "type": "Problemes"
-      },
-      {
-        "start": "17:00",
-        "end": "19:00",
-        "subject": "DADM",
-        "location": "Q4/1013",
-        "type": "Problemes"
-      }
-    ],
-    "Tuesday": [
-      {
-        "start": "10:00",
-        "end": "14:00",
-        "subject": "CVC",
-        "location": "Edifici O",
-        "type": "Treball"
-      },
-      {
-        "start": "15:00",
-        "end": "17:00",
-        "subject": "Visualització",
-        "location": "Q4/1009",
-        "type": "Problemes"
-      },
-      {
-        "start": "17:00",
-        "end": "19:00",
-        "subject": "CEN",
-        "location": "Q4/1009",
-        "type": "Teoria"
-      }
-    ],
-    "Wednesday": [
-      {
-        "start": "10:00",
-        "end": "14:00",
-        "subject": "CVC",
-        "location": "Edifici O",
-        "type": "Treball"
-      },
-      {
-        "start": "15:00",
-        "end": "17:00",
-        "subject": "Criptografia",
-        "location": "Q4/1009",
-        "type": "Problemes"
-      },
-      {
-        "start": "17:00",
-        "end": "19:00",
-        "subject": "Deep learning",
-        "location": "Q4/1009",
-        "type": "Problemes"
-      }
-    ],
-    "Thursday": [
-      {
-        "start": "10:00",
-        "end": "14:00",
-        "subject": "CVC",
-        "location": "Edifici O",
-        "type": "Treball"
-      },
-      {
-        "start": "15:00",
-        "end": "17:00",
-        "subject": "DADM",
-        "location": "Aula Informatica B",
-        "type": "Teoria"
-      },
-      {
-        "start": "17:00",
-        "end": "19:00",
-        "subject": "CEN",
-        "location": "Q4/1009",
-        "type": "Problemes"
-      }
-    ],
-    "Friday": [
-      {
-        "start": "10:00",
-        "end": "14:00",
-        "subject": "CVC",
-        "location": "Edifici O",
-        "type": "Treball"
-      },
-      {
-        "start": "15:00",
-        "end": "17:00",
-        "subject": "Deep learning",
-        "location": "Q4/1009",
-        "type": "Problemes"
-      },
-      {
-        "start": "17:00",
-        "end": "19:00",
-        "subject": "Visualització",
-        "location": "Q4/1009",
-        "type": "Problemes"
-      }
-    ]
+  "Monday": [
+    {
+    "start": "08:30",
+    "end": "13:30",
+    "subject": "Accenture",
+    "type": "Treball"
+    },
+    {
+    "start": "15:00",
+    "end": "17:00",
+    "subject": "Criptografia",
+    "type": "Problemes"
+    },
+    {
+    "start": "17:00",
+    "end": "19:00",
+    "subject": "DADM",
+    "type": "Laboratori"
+    }
+  ],
+  "Tuesday": [
+    {
+    "start": "08:30",
+    "end": "13:30",
+    "subject": "Accenture",
+    "type": "Treball"
+    },
+    {
+    "start": "15:00",
+    "end": "17:00",
+    "subject": "Visualització",
+    "type": "Problemes"
+    },
+    {
+    "start": "17:00",
+    "end": "19:00",
+    "subject": "Cloud",
+    "type": "Teoria"
+    }
+  ],
+  "Wednesday": [
+    {
+    "start": "08:30",
+    "end": "13:30",
+    "subject": "Accenture",
+    "type": "Treball"
+    },
+    {
+    "start": "15:00",
+    "end": "17:00",
+    "subject": "Criptografia",
+    "type": "Problemes"
+    },
+    {
+    "start": "17:00",
+    "end": "19:00",
+    "subject": "Deep learning",
+    "type": "Problemes"
+    }
+  ],
+  "Thursday": [
+    {
+    "start": "08:30",
+    "end": "13:30",
+    "subject": "Accenture",
+    "type": "Treball"
+    },
+    {
+    "start": "15:00",
+    "end": "17:00",
+    "subject": "DADM",
+    "type": "Teoria"
+    },
+    {
+    "start": "17:00",
+    "end": "19:00",
+    "subject": "Cloud",
+    "type": "Laboratori"
+    }
+  ],
+  "Friday": [
+    {
+    "start": "08:30",
+    "end": "13:30",
+    "subject": "Accenture",
+    "type": "Treball"
+    },
+    {
+    "start": "15:00",
+    "end": "17:00",
+    "subject": "Deep learning",
+    "type": "Problemes"
+    },
+    {
+    "start": "17:00",
+    "end": "19:00",
+    "subject": "Visualització",
+    "type": "Problemes"
+    }
+  ]
   }
-  

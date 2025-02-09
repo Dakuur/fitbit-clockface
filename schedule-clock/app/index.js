@@ -110,10 +110,12 @@ clock.ontick = (evt) => {
   const startDate = new Date(currentDate.getFullYear(), 1, 10); // February 10
   const endDate = new Date(currentDate.getFullYear(), 5, 1); // June 1
 
-  if (nextClassInfo && currentDate > startDate && currentDate < endDate) {
+  let notHoliday = currentDate > startDate && currentDate < endDate;
+
+  if (nextClassInfo && notHoliday) {
     nextClass.text = `${nextClassInfo.subject}`;
     nextClassType.text = `${nextClassInfo.type}`;
-    nextRoomTime.text = `${nextClassInfo.location}, ${nextClassInfo.start}`;
+    // nextRoomTime.text = `${nextClassInfo.location}, ${nextClassInfo.start}`;
   } else {
     nextClass.text = "";
     nextClassType.text = "";
